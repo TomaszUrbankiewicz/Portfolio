@@ -1,2 +1,4 @@
 # Portfolio
-Strona internetowa pokazująca moje umiejętności. 
+Polecenia developerskie
+npm install
+npm start //aby uruchomić
