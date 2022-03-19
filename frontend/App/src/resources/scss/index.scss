@@ -1,0 +1,15 @@
+@import "templates/reset";
+@import "templates/grid";
+@import "./variable/animations";
+@import "./variable/colors";
+@import "./variable/fonts";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+body{
+    width: 100%;
+};
