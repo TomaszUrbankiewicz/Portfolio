@@ -4,7 +4,7 @@ import './resources/scss/index.scss';
 import pl from './resources/languages/pl.json';
 import en from './resources/languages/en.json';
 import ru from './resources/languages/ru.json'
-
+import Home from './resources/components/home/Home'
 
 //const obj = JSON.parse(text);
 const App = () => {
@@ -36,12 +36,13 @@ const App = () => {
 
     return (
         <>
-            <button onClick={change_languages} id="pl">Zmień język na Polski</button> <br></br>
+            {/* <button onClick={change_languages} id="pl">Zmień język na Polski</button> <br></br>
             <button onClick={change_languages} id="en">Zmień język na Angielski</button> <br></br>
             <button onClick={change_languages} id="ru">Zmień język na Rosyjski</button> <br></br>
             <span>{language.title}</span>
             <h1>{language.h1}</h1>
-            <p>{language.hp}</p>
+            <p>{language.hp}</p> */}
+            <Home/>
         </>
 
     );
