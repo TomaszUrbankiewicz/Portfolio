@@ -6,15 +6,14 @@ import en from './resources/languages/en.json';
 import ru from './resources/languages/ru.json'
 import Home from './resources/components/home/Home'
 
-//const obj = JSON.parse(text);
 const App = () => {
-    const [language, setLanguage] = useState(pl)
+    const [language, setLanguage] = useState(pl)//zmienna odpowiadająca za pobieranie textów z dsanego pliku
 
-    const change_page_title = (param) => {
+    const change_page_title = (param) => { // funkcja zmieniająca tytuł
         const title = document.querySelector("title");
         title.text = param.title
     }
-    const change_languages = (e) => {
+    const change_languages = (e) => {// funkca zmianiażca zmienną language
         console.log(e.target.id)
         if(e.target.id=="pl"){
             setLanguage(pl)
@@ -36,13 +35,10 @@ const App = () => {
 
     return (
         <>
-            {/* <button onClick={change_languages} id="pl">Zmień język na Polski</button> <br></br>
-            <button onClick={change_languages} id="en">Zmień język na Angielski</button> <br></br>
-            <button onClick={change_languages} id="ru">Zmień język na Rosyjski</button> <br></br>
-            <span>{language.title}</span>
-            <h1>{language.h1}</h1>
-            <p>{language.hp}</p> */}
-            <Home/>
+            <Home
+                change_languages={change_languages}
+                language={language}
+            />
         </>
 
     );

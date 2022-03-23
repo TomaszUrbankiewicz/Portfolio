@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
 
-const Language_selection_to_start = () => {
+const Language_selection_to_start = (props) => {
+    const [show_flags, setShow_flags] = useState(true) 
 
+    const choose_language = (e) =>{
+        props.change_languages(e)
+        setShow_flags(false)
+    }
     return(
-        <section id="language_selection" className="container_selection">
+        <section id="language_selection" className={(show_flags) ? "container_selection" : "container_selection container_selection-invisible"}>
             <div className='filter_box'></div>
             <div className='container_flag'>
-                <div className="box box_polish">
-                    <div className='box_text_language'>
-                        <div className='text_language'>
-                            <p>wybierz język Polski</p>
+                <div  className="box box_polish" >
+                    <div id="pl" className='box_text_language' onClick={choose_language}>
+                        <div id="pl" className='text_language'>
+                            <p id="pl">wybierz język Polski</p>
                         </div>
                     </div>
                 </div>
                 <div className="box box_english">
-                    <div className='box_text_language'>
-                            <div className='text_language'>
-                                <p>choose English language</p>
+                    <div id="en" className='box_text_language' onClick={choose_language}>
+                            <div id="en" className='text_language'>
+                                <p id="en">choose English language</p>
                             </div>
-                        </div>
                     </div>
+                </div>
                 <div className="box box_russian">
-                    <div className='box_text_language'>
-                            <div className='text_language'>
-                                <p>выбрать русский язык</p>
+                    <div id="ru" className='box_text_language' onClick={choose_language}>
+                            <div id="ru" className='text_language'>
+                                <p id="ru">выбрать русский язык</p>
                             </div>
                         </div>
                     </div>
