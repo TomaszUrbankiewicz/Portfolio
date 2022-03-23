@@ -1,1 +1,10 @@
 
+///animacja zamykająca wybór języka na początku
+@keyframes hide_the_flags {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+};
