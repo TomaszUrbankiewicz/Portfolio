@@ -13,25 +13,43 @@ const App = () => {
         const title = document.querySelector("title");
         title.text = param.title
     }
-    const change_languages = (e) => {// funkca zmianiażca zmienną language
-        console.log(e.target.id)
+    const change_languages = (e) => {// funkca zmianiajca jezyk
         if(e.target.id=="pl"){
             setLanguage(pl)
+            window.localStorage.setItem("my_local",JSON.stringify({field_1:"pl"}))
         }
         else if(e.target.id=="en"){
             setLanguage(en)
+            window.localStorage.setItem("my_local",JSON.stringify({field_1:"en"}))
         }
         else if(e.target.id=="ru"){
             setLanguage(ru)
+            window.localStorage.setItem("my_local",JSON.stringify({field_1:"ru"}))
         }
     }
-
+    
     useEffect(() =>{
-        change_page_title(pl)
+        if(JSON.parse(window.localStorage.getItem('my_local'))!=null){
+            if((JSON.parse(window.localStorage.getItem('my_local')).field_1)=="pl"){
+                setLanguage(pl);
+            }
+            else if((JSON.parse(window.localStorage.getItem('my_local')).field_1)=="en"){
+                setLanguage(en);
+            }
+            else if((JSON.parse(window.localStorage.getItem('my_local')).field_1)=="ru"){
+                setLanguage(ru);
+            }
+        }
+        else{
+            setLanguage(language);
+            change_page_title(language)
+        }
     },[])
+
     useEffect(() =>{
         change_page_title(language)
     },[language])
+
 
     return (
         <>
