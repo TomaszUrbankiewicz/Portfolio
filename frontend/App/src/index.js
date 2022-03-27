@@ -5,6 +5,7 @@ import pl from './resources/languages/pl.json';
 import en from './resources/languages/en.json';
 import ru from './resources/languages/ru.json'
 import Home from './resources/components/home/Home'
+import Page_loading from './resources/components/unrelated/Page_loading'
 
 const App = () => {
     const [language, setLanguage] = useState(pl)//zmienna odpowiadająca za pobieranie textów z dsanego pliku
@@ -53,10 +54,11 @@ const App = () => {
 
     return (
         <>
-            <Home
+            {/* <Home
                 change_languages={change_languages}
                 language={language}
-            />
+            /> */}
+            <Page_loading/>
         </>
 
     );
