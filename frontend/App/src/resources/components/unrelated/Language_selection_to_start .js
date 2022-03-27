@@ -1,3 +1,4 @@
+//komponent do wyboru języka na start
 import React, { useState } from 'react';
 
 const Language_selection_to_start = (props) => {
