@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
 const Language_selection_to_start = (props) => {
-    const [show_flags, setShow_flags] = useState(true) 
+    const [hide_flags, setHide_flags] = useState(true) // zmienna chowająca flagi wyboru języka 
 
-    const choose_language = (e) =>{
+    const choose_language = (e) =>{ // zmieniam język i chowam flagi 
         props.change_languages(e)
-        setShow_flags(false)
+        setHide_flags(false)
     }
+
     return(
-        <section id="language_selection" className={(show_flags) ? "container_selection" : "container_selection container_selection-invisible"}>
+        <section id="language_selection" className={(hide_flags) ? "container_selection" : "container_selection container_selection-invisible"}>
             <div className='filter_box'></div>
             <div className='container_flag'>
                 <div  className="box box_polish" >
-                    <div id="pl" className='box_text_language' onClick={choose_language}>
+                    <div id="pl" className='box_text_language' onClick={choose_language }>
                         <div id="pl" className='text_language'>
                             <p id="pl">wybierz język Polski</p>
                         </div>
