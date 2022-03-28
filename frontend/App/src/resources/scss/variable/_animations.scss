@@ -9,7 +9,7 @@
     }
 };
 
-//animacja ladowania na stronie
+//animacja ladowania na stronie, kręcenie paska
 @keyframes wheel_rotation {
     0%{
         transform: rotate(0deg);
@@ -18,5 +18,40 @@
     100%{
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
+    }
+};
+
+//animacja odkrywania kropek
+@keyframes discover_the_dots {
+    0%{
+        right: -2px;
+    }
+    35%{
+        right: -10px;
+    }
+    65%{
+        right: -15px;
+    }
+    100%{
+        right: -23px;
+    }
+};
+
+//animacja ladowania na stronie, mruganie logo
+@keyframes blinking_logo {
+    0%{
+        opacity: 0.4;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.4;
     }
 };
