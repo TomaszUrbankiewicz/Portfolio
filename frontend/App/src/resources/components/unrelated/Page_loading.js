@@ -10,10 +10,21 @@ const Page_loading  = (props) => {
     
     
     return(
-        <section id='page_loading' className='container_page_loading_1'>
-            <div className='loader'></div>
+        <section id='page_loading' className='container_page_loading'>
+            <div className='container_page_loading__circle'></div>
+            <div className='container_page_loading__text'>
+                <span className='text circle_text'>Leading...</span>
+            </div>
         </section>
     );
+    // return(
+    //     <section id='page_loading' className='container_page_loading'>
+    //         <div className='container_page_loading__cup'></div>
+    //         <div className='container_page_loading__text'>
+    //             <span className='text cup_text'>Leading...</span>
+    //         </div>
+    //     </section>
+    // );
 
     
 };

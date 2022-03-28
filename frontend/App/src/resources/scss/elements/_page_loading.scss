@@ -1,25 +1,26 @@
-.container_page_loading_1{
+.container_page_loading{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: $color1;
-    .loader{
+    &__circle{
         position: relative;
-        width: 350px;
-        height:350px;
+        width: 100px;
+        height:100px;
         border-radius: 50%;
         background: linear-gradient(45deg, transparent, transparent 40%, #0104b4);
         animation: wheel_rotation 2s linear infinite;
         &::before{
             content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            background-color: black;
+            top: 5px;
+            left: 5px;
+            right:5px;
+            bottom: 5px;
+            background-color: $color1;
             border-radius: 50%;
             z-index: 1000;
         }
@@ -30,10 +31,71 @@
             left: 0px;
             right: 0px;
             bottom: 0px;
-            background: linear-gradient(45deg, transparent, transparent 40%, #0104b4);
+            background: linear-gradient(45deg, transparent, transparent 80%, #0104b4);
             border-radius: 50%;
             z-index: 1;
             filter: blur(50px);
+        }
+        @media(min-width: 900px){
+            width: 250px;
+            height: 250px;
+        };
+        @media(min-width: 1200px){
+            width: 350px;
+            height: 350px;
+        };
+        
+    }
+    &__text{
+        margin-top: 3%;
+        span{
+            color: $color5;
+            font-size: 14px;
+            margin-top: 3%;
+            position: relative;
+            @media(min-width: 900px){
+                font-size: 26px;
+            };
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: $color1;
+                width: 20%;
+                height: 30%;
+                right: -2px;
+                top: 9px;
+                animation: discover_the_dots 1s linear infinite;
+                @media(min-width: 900px){
+                    top: 18px;
+                };
+            }
+        }
+        .circle_text{
+            color: $color4;
+        }
+        .cup_text{
+            color: $color3;
+        }
+    }
+    &__cup{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image:url("/App/src/resources/img/logo.svg");
+        background-repeat: no-repeat;
+        background-size:cover ;
+        background-position: center;
+        animation: blinking_logo 5s linear infinite;
+        @media(min-width: 900px){
+            width: 250px;
+            height: 250px;
+        };
+        @media(min-width: 1200px){
+            width: 350px;
+            height: 350px;
+        };
+        .cup_text{
+            color: #061220;
         }
     }
 }
