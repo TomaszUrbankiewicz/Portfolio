@@ -13,7 +13,7 @@ const App = () => {
 
     useEffect(() =>{
         setTimeout(()=>{
-            setPage_loading(false)
+            setPage_loading(true)
         },6000)
     },[])
 
