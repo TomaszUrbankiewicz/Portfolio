@@ -9,6 +9,13 @@ import Page_loading from './resources/components/unrelated/Page_loading'
 
 const App = () => {
     const [language, setLanguage] = useState(pl)//zmienna odpowiadająca za pobieranie textów z dsanego pliku
+    const [page_loading, setPage_loading] = useState(true)
+
+    useEffect(() =>{
+        setTimeout(()=>{
+            setPage_loading(true)
+        },6000)
+    },[])
 
     const change_page_title = (param) => { // funkcja zmieniająca tytuł
         const title = document.querySelector("title");
@@ -54,11 +61,14 @@ const App = () => {
 
     return (
         <>
+        <Page_loading 
+            page_loading={page_loading}
+        />
             {/* <Home
                 change_languages={change_languages}
                 language={language}
             /> */}
-            <Page_loading/>
+            
         </>
 
     );

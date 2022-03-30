@@ -13,13 +13,24 @@
 @keyframes wheel_rotation {
     0%{
         transform: rotate(0deg);
-        filter: hue-rotate(0deg);
+        //filter: hue-rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
-        filter: hue-rotate(360deg);
+        //filter: hue-rotate(360deg);
     }
 };
+@keyframes wheel_rotation2 {
+    0%{
+        transform: rotate(360deg);
+        //filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+        //filter: hue-rotate(360deg);
+    }
+};
+
 
 //animacja odkrywania kropek
 @keyframes discover_the_dots {
@@ -55,3 +66,4 @@
         opacity: 0.4;
     }
 };
+

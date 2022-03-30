@@ -8,11 +8,57 @@
     background-color: $color1;
     &__circle{
         position: relative;
-        width: 100px;
-        height:100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height:80px;
         border-radius: 50%;
-        background: linear-gradient(45deg, transparent, transparent 40%, #0104b4);
-        animation: wheel_rotation 2s linear infinite;
+        background: linear-gradient(45deg, transparent, transparent 50%, #0104b4);
+        animation: wheel_rotation 4s linear infinite;
+        &__small{
+            position: absolute;
+            z-index: 3;
+            border-radius: 50%;
+            width: 60%;
+            height: 60%;
+            background: linear-gradient(45deg, transparent, transparent 50%, #34db02);
+            animation: wheel_rotation2 4s linear infinite;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right:5px;
+                bottom: 5px;
+                background-color: $color1;
+                border-radius: 50%;
+                z-index: 1;
+            }
+        }
+        &__tiny{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            border-radius: 50%;
+            width: 30%;
+            height: 30%;
+            background: linear-gradient(45deg, transparent, transparent 50%, #f50390);
+            animation: wheel_rotation 2s linear infinite;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right:5px;
+                bottom: 5px;
+                background-color: $color1;
+                border-radius: 50%;
+                z-index: 1;
+            }
+        }
         &::before{
             content: '';
             position: absolute;
@@ -22,19 +68,7 @@
             bottom: 5px;
             background-color: $color1;
             border-radius: 50%;
-            z-index: 1000;
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background: linear-gradient(45deg, transparent, transparent 80%, #0104b4);
-            border-radius: 50%;
             z-index: 1;
-            filter: blur(50px);
         }
         @media(min-width: 900px){
             width: 250px;
@@ -44,7 +78,6 @@
             width: 350px;
             height: 350px;
         };
-        
     }
     &__text{
         margin-top: 3%;
@@ -71,7 +104,7 @@
             }
         }
         .circle_text{
-            color: $color4;
+            color: #0104b4;
         }
         .cup_text{
             color: $color3;
@@ -85,7 +118,7 @@
         background-repeat: no-repeat;
         background-size:cover ;
         background-position: center;
-        animation: blinking_logo 5s linear infinite;
+        animation: blinking_logo 5.5s linear infinite;
         @media(min-width: 900px){
             width: 250px;
             height: 250px;
