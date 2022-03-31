@@ -13,7 +13,7 @@ const App = () => {
 
     useEffect(() =>{
         setTimeout(()=>{
-            setPage_loading(true)
+            setPage_loading(false)
         },6000)
     },[])
 
@@ -61,13 +61,11 @@ const App = () => {
 
     return (
         <>
-        <Page_loading 
-            page_loading={page_loading}
-        />
-            {/* <Home
+            <Page_loading page_loading={page_loading} /> 
+            <Home
                 change_languages={change_languages}
                 language={language}
-            /> */}
+            />
             
         </>
 
