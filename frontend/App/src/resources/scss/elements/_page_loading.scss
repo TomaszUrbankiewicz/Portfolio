@@ -1,4 +1,6 @@
 .container_page_loading{
+    position: absolute;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,6 +111,9 @@
         .cup_text{
             color: $color3;
         }
+        .loading_bar_text{
+            color: #0104b4;
+        }
     }
     &__cup{
         width: 100px;
@@ -131,4 +136,22 @@
             color: #061220;
         }
     }
+    &__loading_bar{
+        width: 70%;
+        height: 15px;
+        border: solid 1px #34db02;
+        opacity: 0.6;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 10%;
+            height:100%;
+            background-color: #0104b4;
+            animation: loading_the_strap 6.5s both  ;
+        }
+    }
+}
+.container_page_loading-invisible{
+    animation: hide_the_flags 2s 0s both ;
 }
