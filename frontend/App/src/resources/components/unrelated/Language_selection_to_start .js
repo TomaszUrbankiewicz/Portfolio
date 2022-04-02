@@ -8,7 +8,7 @@ const Language_selection_to_start = (props) => {
         props.change_languages(e)
         setHide_flags(false)
     }
-
+    
     return(
         <section id="language_selection" className={(hide_flags) ? "container_selection" : "container_selection container_selection-invisible"}>
             <div className='filter_box'></div>
