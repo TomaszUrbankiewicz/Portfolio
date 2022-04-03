@@ -89,3 +89,13 @@
         width: 100%;
     }
 };
+//animacja testowa
+@keyframes test {
+    0%{
+        height: 15px;
+    }
+    
+    100%{
+        width: 30px;
+    }
+};
