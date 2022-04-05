@@ -125,7 +125,7 @@
             justify-content: center;
             align-items: center;
             position:relative;
-            border-radius: 0px 0px 0px 20px;
+            border-radius: 50%;
             color: $color0;
             &:hover{
                 cursor: pointer;
@@ -134,12 +134,12 @@
         }
         &__languages_to_choose{
             position: absolute;
+            width: 30px;
             left: 30px;
-            top: 0px;
-            display: none;
-            height: 30px;
+            top:0px;
+            transition: height 2s;
+            height: 0px;
             
-
             &__box_languages{
                 width: 30px;
                 height: 100%;
@@ -158,7 +158,20 @@
         }
     }
 }
+.hide{
+    display: none;
+}
 .show_list{
     display: block;
-    animation: test 3 both  ;
+    animation: showing_list 0.5s linear 0s 1 both ;
 }
+.hide_list{
+    animation: hide_list 0.5s linear 0s 1 both ;
+}
+.square{
+    animation: turning_circle_into_square 0.3s linear 0s 1 both ;
+}
+.circle{
+    animation: turning_square_into_circle 0.3s linear 0s 1 both ;
+}
+//both

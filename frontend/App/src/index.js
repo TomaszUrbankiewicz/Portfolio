@@ -72,7 +72,7 @@ const App = () => {
     if(show_flags){
         return(
             <>
-                {/* <Page_loading page_loading={page_loading} />  */}
+                <Page_loading page_loading={page_loading} /> 
                 <Language_selection_to_start
                     change_languages={change_languages}
                 />
@@ -87,7 +87,7 @@ const App = () => {
         else{
             return(
                 <>
-                    {/* <Page_loading page_loading={page_loading} />  */}
+                    <Page_loading page_loading={page_loading} /> 
                     <Home
                         change_languages={change_languages}
                         language={language}
