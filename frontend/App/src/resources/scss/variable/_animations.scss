@@ -89,3 +89,53 @@
         width: 100%;
     }
 };
+//animacja pokazania listy z jezykami
+@keyframes showing_list {
+    0%{
+        height: 0px;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        height: 30px;
+        opacity: 1
+        
+    }
+};
+//animacja schowania listy z jezykami
+@keyframes hide_list {
+    0%{
+        height: 30px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    68%{
+        opacity: 0
+    }
+    100%{
+        height: 0px;
+        opacity: 0
+    }
+};
+// animacja znieniająca wygląd małegobattona wyboru języka 
+@keyframes turning_circle_into_square {
+    0%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+};
+// animacja znieniająca wygląd małegobattona wyboru języka 
+@keyframes turning_square_into_circle {
+    0%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 0%;
+    }
+};
